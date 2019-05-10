@@ -171,9 +171,6 @@ RCT_EXPORT_METHOD(lockToPortrait)
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationUnknown] forKey:@"orientation"];
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
         
-        // restore device orientation
-        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: deviceOrientation] forKey:@"orientation"];
-        
         [UIViewController attemptRotationToDeviceOrientation];
 
         // send a lock event
@@ -214,8 +211,6 @@ RCT_EXPORT_METHOD(lockToLandscape)
             [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
         }
         
-        // restore device orientation
-        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: deviceOrientation] forKey:@"orientation"];
 
         [UIViewController attemptRotationToDeviceOrientation];
 
@@ -250,9 +245,6 @@ RCT_EXPORT_METHOD(lockToLandscapeRight)
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationUnknown] forKey:@"orientation"];
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeLeft] forKey:@"orientation"];
         
-        // restore device orientation
-        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: deviceOrientation] forKey:@"orientation"];
-        
         [UIViewController attemptRotationToDeviceOrientation];
 
         // send a lock event
@@ -285,8 +277,6 @@ RCT_EXPORT_METHOD(lockToLandscapeLeft)
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationUnknown] forKey:@"orientation"];
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
         
-        // restore device orientation
-        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: deviceOrientation] forKey:@"orientation"];
         
         [UIViewController attemptRotationToDeviceOrientation];
 
